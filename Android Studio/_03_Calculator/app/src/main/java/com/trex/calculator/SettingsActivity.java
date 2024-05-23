@@ -1,2 +1,12 @@
-package com.trex.calculator;public class SettingsActivity {
+package com.trex.calculator;
+
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+public class SettingsActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.setting);
+    }
 }

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.janak.calculator.trex.dev"
+    namespace = "com.janak.calculator.trex.claculator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.janak.calculator.trex.dev"
+        applicationId = "com.janak.calculator.trex.claculator"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
