@@ -1,0 +1,14 @@
+<resources>
+    <!-- Primary brand color -->
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryVariant">#7E57C2</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <!-- Secondary brand color -->
+    <color name="colorSecondary">#FF80AB</color>
+    <color name="colorSecondaryVariant">#FF4081</color>
+    <color name="colorOnSecondary">#000000</color>
+
+    <!-- Other colors -->
+    <color name="teal_200">#FF80CBC4</color>
+</resources>

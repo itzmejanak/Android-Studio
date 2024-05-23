@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textAppearance="@style/TextAppearance.CalculatorPlus.Headline6"
+        android:textColor="?textPrimary"
+        android:id="@id/library"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_marginStart="@dimen/space_l"
+        android:layout_marginEnd="@dimen/space_l"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.CalculatorPlus.Body1"
+        android:textColor="?textDisable"
+        android:id="@id/libraryOwner"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        app:layout_constraintEnd_toEndOf="@id/library"
+        app:layout_constraintStart_toStartOf="@id/library"
+        app:layout_constraintTop_toBottomOf="@id/library" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.CalculatorPlus.Body1"
+        android:textColor="?textSecondary"
+        android:id="@id/licenseType"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        app:layout_constraintEnd_toEndOf="@id/libraryOwner"
+        app:layout_constraintStart_toStartOf="@id/libraryOwner"
+        app:layout_constraintTop_toBottomOf="@id/libraryOwner" />
+    <View
+        android:background="?border"
+        android:layout_width="0.0dip"
+        android:layout_height="0.8000001dip"
+        android:layout_marginTop="@dimen/space_l"
+        app:layout_constraintEnd_toEndOf="@id/licenseType"
+        app:layout_constraintStart_toStartOf="@id/licenseType"
+        app:layout_constraintTop_toBottomOf="@id/licenseType" />
+</androidx.constraintlayout.widget.ConstraintLayout>

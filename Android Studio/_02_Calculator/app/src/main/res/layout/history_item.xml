@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_l"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textAppearance="@style/TextAppearance.CalculatorPlus.Subtitle1"
+        android:textColor="?operatorBtnColor"
+        android:gravity="start"
+        android:id="@id/date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_xl"
+        android:layout_marginEnd="@dimen/space_xl" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.CalculatorPlus.Headline3"
+        android:textColor="?textPrimary"
+        android:gravity="end"
+        android:id="@id/expression"
+        android:background="@null"
+        android:focusable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:layout_marginStart="@dimen/space_xl"
+        android:layout_marginEnd="@dimen/space_xl" />
+    <TextView
+        android:textAppearance="@style/TextAppearance.CalculatorPlus.Headline4"
+        android:textColor="?textDisable"
+        android:gravity="end"
+        android:id="@id/result"
+        android:background="@null"
+        android:focusable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_sm"
+        android:layout_marginBottom="@dimen/space_m"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:layout_marginStart="@dimen/space_xl"
+        android:layout_marginEnd="@dimen/space_xl" />
+    <View
+        android:id="@id/border"
+        android:background="?border"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+</LinearLayout>
