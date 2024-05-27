@@ -13,7 +13,7 @@
 ---
 
 ### Architecture Of Android
-![Android Architecture](./Diagrams/Android%20Archetecture.png)
+![Android Architecture](../_00_Diagrams/Android%20Archetecture.png)
 
 
 ---

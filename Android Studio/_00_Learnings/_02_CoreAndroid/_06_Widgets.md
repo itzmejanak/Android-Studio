@@ -2,7 +2,7 @@
 
 - AlertDialog includes this Things so we have to setthen into our code:
 
-![alert](./Diagrams/alert.png)
+![alert](../_00_Diagrams/alert.png)
 ```java
 AlertDialog.Builder builder = new AlertDialog.Builder(this);
 builder.setTitle("Alert Dialog")

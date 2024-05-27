@@ -47,7 +47,7 @@
 
 - `Here is the image to Understand Activity`
 
-![Android Architecture](./Diagrams/Activity.png)
+![Android Architecture](../_00_Diagrams/Activity.png)
 ---
 
 

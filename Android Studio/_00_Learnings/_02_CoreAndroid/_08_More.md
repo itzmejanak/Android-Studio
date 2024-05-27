@@ -9,11 +9,11 @@ Adaptor is like a bridge between "Android UI components" and “Data Source". An
 4. SimpleAdaptor
 5. Custom SimpleAdaptor
 
-![adapters](./Diagrams/Adapters.png)
+![adapters](../_00_Diagrams/Adapters.png)
 
 - `Working of the Adapters`
 
-![adapters](./Diagrams/Working_of_adapters.png)
+![adapters](../_00_Diagrams/Working_of_adapters.png)
 
 - We can Use adapters for the following ways :-
 

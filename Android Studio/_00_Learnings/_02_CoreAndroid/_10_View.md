@@ -26,11 +26,11 @@ Some important attributes are:
 - `padding`, `margin`
 - `divider`, `showDivider`
 
-![linear img](./Diagrams/Linear.png)
+![linear img](../_00_Diagrams/Linear.png)
 
 Practice this for understandig Linear layout:
 
-![linear img](./Diagrams/Practices_Linear.png)
+![linear img](../_00_Diagrams/Practices_Linear.png)
 
 ---
 ### 2. RelativeLayout:
@@ -45,11 +45,11 @@ Some important attributes for widgets are:
 - `layout_centerHorizontal`
 - `layout_alignParentBottom`
 
-![Relative img](./Diagrams/Relative.png)
+![Relative img](../_00_Diagrams/Relative.png)
 
 Practice this for understanding RelativeLayout:
 
-![Relative img](./Diagrams/Practices_Relative.png)
+![Relative img](../_00_Diagrams/Practices_Relative.png)
 
 ---
 ### ConstraintLayout:

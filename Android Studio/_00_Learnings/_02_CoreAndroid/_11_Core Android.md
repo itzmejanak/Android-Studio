@@ -39,4 +39,4 @@
 
 Understanding Working of Android LifeCycle By Image:
 
-![lifeCycle_android](./Diagrams/Application_lifecycle.png) 
+![lifeCycle_android](../_00_Diagrams/Application_lifecycle.png) 
