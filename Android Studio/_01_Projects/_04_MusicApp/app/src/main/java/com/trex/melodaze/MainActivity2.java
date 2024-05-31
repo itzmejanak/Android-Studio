@@ -1,6 +1,8 @@
 package com.trex.melodaze;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,15 @@ public class MainActivity2 extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void changeActivity(View view) {
+        Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void changeNewActivity(View view) {
+        Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+        startActivity(intent);
+    }
+
 }

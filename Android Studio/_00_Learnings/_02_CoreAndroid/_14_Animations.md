@@ -1,3 +1,14 @@
+## Topics of Animation Section
+### Animation
+
+- Animation using XML files
+- Animation between activities
+- Animation like battery
+- Lottie Files
+- Circular image
+- Toasty
+---
+
 ### Animation:
 - It is the process by which objects (views in Android) can change their position or shape.
 
