@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:background="@color/white"
     tools:context=".List">
 
     <ListView
         android:id="@+id/myListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="55dp"
         android:layout_weight="1"/>
 
 

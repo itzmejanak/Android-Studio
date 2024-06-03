@@ -1,210 +1,171 @@
 package com.trex.musicplus;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.media.MediaPlayer;
+import android.content.Context;
 import android.os.Bundle;
-import android.os.Environment;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Random;
-import android.os.AsyncTask;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 public class Temp extends Fragment implements View.OnClickListener {
-    private Button btnPlay, btnPause, btnStop, btnNext, btnPrevious;
-    private ArrayList<String> musicPaths = new ArrayList<>();
-    private MediaPlayer mediaPlayer;
-    private int currentIndex = -1;
-    private boolean isRandomTrackSelected = false;
-    private static final int REQUEST_PERMISSION = 1;
+    private MainActivityTwo mainActivity;
+    private Button btnPlay, btnNext, btnPrevious;
+    private SeekBar seekBar;
+    private TextView nameOfSong, songDuration, currentTime;
+    private Handler handler = new Handler();
+    private Runnable updateSeekBar;
+    TextView emoji;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof MainActivityTwo) {
+            mainActivity = (MainActivityTwo) context;
+        } else {
+            throw new ClassCastException(context.toString() + " must implement MainActivityTwo");
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_temp, container, false);
-        initViews(view);
-        checkPermissions();
-        getAllMusicPaths();
+
+        btnPlay = view.findViewById(R.id.btnPlay);
+        btnNext = view.findViewById(R.id.btnNext);
+        btnPrevious = view.findViewById(R.id.btnPrevious);
+        seekBar = view.findViewById(R.id.seekBar);
+        nameOfSong = view.findViewById(R.id.title);
+        emoji = view.findViewById(R.id.emoji);
+        currentTime = view.findViewById(R.id.currentTime);
+        emoji.setOnClickListener(this::changeLove);
+        songDuration = view.findViewById(R.id.duration);
+
+
+        btnPlay.setOnClickListener(this);
+        btnNext.setOnClickListener(this);
+        btnPrevious.setOnClickListener(this);
+
+        if (mainActivity != null) {
+            updateSongInfo();
+        }
+
+
+        updateSeekBar = new Runnable() {
+            @Override
+            public void run() {
+                if (mainActivity.isPlaying()) {
+                    int currentPosition = mainActivity.getCurrentPosition();
+                    String time = formatDuration(currentPosition);
+                    currentTime.setText(time);
+                    seekBar.setProgress(currentPosition);
+                }
+                handler.postDelayed(this, 1000); // Update every second
+            }
+        };
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser) {
+                    mainActivity.seekTo(progress);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
         return view;
     }
 
-    private void initViews(View view) {
-        btnPlay = view.findViewById(R.id.btnPlay);
-        btnPause = view.findViewById(R.id.btnPause);
-        btnStop = view.findViewById(R.id.btnStop);
-        btnNext = view.findViewById(R.id.btnNext);
-        btnPrevious = view.findViewById(R.id.btnPrevious);
-        btnPlay.setOnClickListener(this);
-        btnPause.setOnClickListener(this);
-        btnStop.setOnClickListener(this);
-        btnNext.setOnClickListener(this);
-        btnPrevious.setOnClickListener(this);
-    }
-
-    private void checkPermissions() {
-        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_PERMISSION);
-        }
+    @Override
+    public void onResume() {
+        super.onResume();
+        handler.post(updateSeekBar);
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (requestCode == REQUEST_PERMISSION && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            getAllMusicPaths();
-        } else {
-            Toast.makeText(getContext(), "Permission denied", Toast.LENGTH_SHORT).show();
-        }
+    public void onPause() {
+        super.onPause();
+        handler.removeCallbacks(updateSeekBar);
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnPlay) {
-            playMusic();
-        } else if (v.getId() == R.id.btnPause) {
-            pauseMusic();
-        } else if (v.getId() == R.id.btnStop) {
-            stopMusic();
-        } else if (v.getId() == R.id.btnNext) {
-            playNextTrack();
-        } else if (v.getId() == R.id.btnPrevious) {
-            playPreviousTrack();
-        }
-    }
-
-
-    private void playMusic() {
-        if (musicPaths.isEmpty()) {
-            Toast.makeText(getActivity(), "No music files found", Toast.LENGTH_SHORT).show();
+        if (mainActivity == null) {
             return;
         }
-        if (mediaPlayer == null) {
-            initMediaPlayer();
-        }
-        if (!isRandomTrackSelected) {
-            selectRandomTrack();
-            isRandomTrackSelected = true;
-        }
-        if (!mediaPlayer.isPlaying()) {
-            mediaPlayer.start();
-            Toast.makeText(getActivity(), "Playing " + musicPaths.get(currentIndex), Toast.LENGTH_SHORT).show();
-        }
-    }
 
-    private void pauseMusic() {
-        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            mediaPlayer.pause();
-            Toast.makeText(getActivity(), "Paused " + musicPaths.get(currentIndex), Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(getActivity(), "Nothing is playing", Toast.LENGTH_SHORT).show();
-        }
-    }
+        int id = v.getId();
 
-    private void stopMusic() {
-        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
-            try {
-                mediaPlayer.prepare();
-                mediaPlayer.seekTo(0);
-                Toast.makeText(getActivity(), "Stopped", Toast.LENGTH_SHORT).show();
-            } catch (IOException e) {
-                e.printStackTrace();
+        if (id == R.id.btnPlay) {
+            if (mainActivity.isPlaying()) {
+                mainActivity.pauseMusic();
+                btnPlay.setCompoundDrawablesWithIntrinsicBounds(R.drawable.play, 0, 0, 0);
+            } else {
+                mainActivity.startMusic();
+                btnPlay.setCompoundDrawablesWithIntrinsicBounds(R.drawable.pause, 0, 0, 0);
             }
-        } else {
-            Toast.makeText(getActivity(), "Nothing is playing", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void initMediaPlayer() {
-        mediaPlayer = new MediaPlayer();
-        mediaPlayer.setOnCompletionListener(mp -> playNextTrack());
-    }
-
-    private void selectRandomTrack() {
-        Random random = new Random();
-        currentIndex = random.nextInt(musicPaths.size());
-        playCurrentTrack();
-    }
-
-    private void playNextTrack() {
-        if (!musicPaths.isEmpty()) {
-            currentIndex = (currentIndex + 1) % musicPaths.size();
-            playCurrentTrack();
-        } else {
-            Toast.makeText(getActivity(), "No tracks available", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void playPreviousTrack() {
-        if (!musicPaths.isEmpty()) {
-            currentIndex = (currentIndex - 1 + musicPaths.size()) % musicPaths.size();
-            playCurrentTrack();
-        } else {
-            Toast.makeText(getActivity(), "No tracks available", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void playCurrentTrack() {
-        if (mediaPlayer != null && !musicPaths.isEmpty()) {
-            try {
-                mediaPlayer.reset();
-                mediaPlayer.setDataSource(musicPaths.get(currentIndex));
-                mediaPlayer.prepare();
-                mediaPlayer.start();
-                Toast.makeText(getContext(), "Playing " + musicPaths.get(currentIndex), Toast.LENGTH_SHORT).show();
-            } catch (IOException e) {
-                e.printStackTrace();
-                Toast.makeText(getActivity(), "Error playing track", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(getActivity(), "Cannot play track", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void getAllMusicPaths() {
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... voids) {
-                getAllMusicPaths(Environment.getExternalStorageDirectory());
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                // Here, you can notify the user or update the UI as needed
-            }
-        }.execute();
-    }
-
-    private void getAllMusicPaths(File directory) {
-        if (directory != null && directory.isDirectory()) {
-            File[] files = directory.listFiles();
-            if (files != null) {
-                for (File file : files) {
-                    if (file.isDirectory()) {
-                        getAllMusicPaths(file); // Recursively search in subdirectories
-                    } else if (file.isFile() && file.getName().endsWith(".mp3")) {
-                        musicPaths.add(file.getAbsolutePath());
-                    }
-                }
-            }
+        } else if (id == R.id.btnNext) {
+            mainActivity.playNextTrack();
+            updateSongInfo();
+        } else if (id == R.id.btnPrevious) {
+            mainActivity.playPreviousTrack();
+            updateSongInfo();
         }
     }
 
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
+    private void updateSongInfo() {
+        if (mainActivity != null) {
+            String songPath = mainActivity.getCurrentSongName();
+            String songName = getSongNameFromPath(songPath);
+            int duration = mainActivity.getCurrentSongDuration();
+            nameOfSong.setText(songName);
+            songDuration.setText(formatDuration(duration));
+
+            // Set maximum value of SeekBar to the duration of the song
+            // Make sure the duration is set in milliseconds
+            seekBar.setMax(duration);
+
+            // Update SeekBar progress according to current position
+            int currentPosition = mainActivity.getCurrentPosition();
+            seekBar.setProgress(currentPosition);
         }
+    }
+
+    // Method to extract song name from the file path
+    private String getSongNameFromPath(String songPath) {
+        // Split the path using the file separator ("/" for Unix-like systems)
+        String[] parts = songPath.split("/");
+        // Get the last part which represents the file name
+        String fileName = parts[parts.length - 1];
+        // Remove the file extension
+        String[] nameParts = fileName.split("\\.");
+        return nameParts[0]; // Return the name without the extension
+    }
+
+
+
+
+
+    private String formatDuration(int duration) {
+        int minutes = (duration / 1000) / 60;
+        int seconds = (duration / 1000) % 60;
+        return String.format("%02d:%02d", minutes, seconds);
+    }
+
+    void changeLove(View view) {
+        emoji.setText("❤\uFE0F");
     }
 }

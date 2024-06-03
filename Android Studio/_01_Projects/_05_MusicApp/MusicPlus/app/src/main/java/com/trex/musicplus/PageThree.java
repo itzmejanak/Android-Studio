@@ -1,23 +1,22 @@
 package com.trex.musicplus;
 
-import static android.text.TextUtils.replace;
-
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-public class PageThree extends Fragment implements View.OnClickListener{
+
+import androidx.fragment.app.Fragment;
+
+public class PageThree extends Fragment implements View.OnClickListener, ScanMusic.ScanMusicCallback {
     Button buttonNext;
     TextView buttonBack;
     ImageView imageView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,7 +28,6 @@ public class PageThree extends Fragment implements View.OnClickListener{
         buttonBack.setOnClickListener(this);
         imageView = view.findViewById(R.id.imageView4);
         imageView.setOnClickListener(this);
-//        buttonNext = view.findViewById(R.id.backButton);
 
         return view;
     }
@@ -42,16 +40,19 @@ public class PageThree extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), MainActivityTwo.class);
             startActivity(intent);
         } else if (v.getId() == R.id.imageView4) {
-            ImageView imageView = (ImageView) v; // Cast the View to ImageView
-            Integer tag = (Integer) imageView.getTag(); // Get the current tag
-            if (tag != null && tag == R.drawable.switch_off) {
-                imageView.setImageResource(R.drawable.switch_on);
-                imageView.setTag(R.drawable.switch_on); // Update the tag to the new resource
-            } else {
-                imageView.setImageResource(R.drawable.switch_off);
-                imageView.setTag(R.drawable.switch_off); // Update the tag to the new resource
-            }
+            new ScanMusic(getActivity(), this).execute();
         }
     }
 
+    @Override
+    public void onScanCompleted(boolean hasMusicFiles, int totalFiles) {
+        // Update the image view state
+        if (hasMusicFiles) {
+            imageView.setImageResource(R.drawable.switch_on);
+            imageView.setTag(R.drawable.switch_on);
+        } else {
+            imageView.setImageResource(R.drawable.switch_off);
+            imageView.setTag(R.drawable.switch_off);
+        }
+    }
 }

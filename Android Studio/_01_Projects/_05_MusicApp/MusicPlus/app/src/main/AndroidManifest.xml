@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Storage Permission for reading music files -->
-    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicPlus"
         tools:targetApi="31">
+        <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityThree"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="false" />
         <activity
             android:name=".MainActivityTwo"
             android:exported="false" />

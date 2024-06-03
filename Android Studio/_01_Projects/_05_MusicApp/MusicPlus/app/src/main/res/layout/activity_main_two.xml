@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/music_icon_actthree"
-            android:text="Temp"
+            android:text="Play"
             app:tabTextColor="@color/tab_unselected_color" />
 
     </com.google.android.material.tabs.TabLayout>
@@ -59,9 +59,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.00999999" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -86,6 +89,8 @@
         app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <ImageView
         android:id="@+id/imageView14"

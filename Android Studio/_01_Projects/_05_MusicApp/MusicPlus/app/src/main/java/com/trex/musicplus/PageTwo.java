@@ -1,11 +1,15 @@
 package com.trex.musicplus;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +25,7 @@ public class PageTwo extends Fragment implements View.OnClickListener {
     Button nextButton;
     TextView backButton;
     ImageView imageView2;
+    TextView textView10;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +39,8 @@ public class PageTwo extends Fragment implements View.OnClickListener {
         imageView2 = view.findViewById(R.id.imageView2);
         imageView2.setTag(R.drawable.untik); // Set initial tag
         imageView2.setOnClickListener(this);
+        textView10 = view.findViewById(R.id.textView10);
+        textView10.setOnClickListener(this);
 
         return view;
     }
@@ -49,9 +56,14 @@ public class PageTwo extends Fragment implements View.OnClickListener {
             getParentFragmentManager().popBackStack();
         } else if (v.getId() == R.id.imageView2) {
             handlePermissionAndToggle(v);
+        } else if (v.getId() == R.id.textView10) {
+            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            Uri uri = Uri.fromParts("package", "com.trex.musicplus", null);
+            intent.setData(uri);
+            startActivity(intent);
         }
-    }
 
+    }
     private void tickUntick(View v) {
         int currentTag = (int) v.getTag();
         int newTag = (currentTag == R.drawable.untik) ? R.drawable.tick : R.drawable.tick;

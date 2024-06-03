@@ -89,10 +89,34 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     // Retrieve
-    public Cursor getUserByEmail(String email) {
+    public ArrayList<UserModal> getLoggedinUserDetails(String email) {
+        ArrayList<UserModal> al = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
-        return sqLiteDatabase.query(TABLE_NAME, null, COLUMN_EMAIL + "=?", new String[]{email}, null, null, null);
+        String query = "SELECT * FROM register WHERE email=?";
+        
+        // Using try-with-resources to ensure resources are closed properly
+        try (Cursor cursor = sqLiteDatabase.rawQuery(query, null)) {
+            if (cursor.moveToFirst()) {
+                do {
+                    String name = cursor.getString(1);
+                    String emailFromDB = cursor.getString(2);
+                    String gender = cursor.getString(3);
+                    
+                    UserModal user = new UserModal();
+                    user.setName(name);
+                    user.setEmail(emailFromDB);
+                    user.setGender(gender);
+                    
+                    al.add(user);
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return al;
     }
+
 
     // Update
     public int updateUserEmail(String oldEmail, String newEmail) {
@@ -122,17 +146,6 @@ public class DbHelper extends SQLiteOpenHelper {
   dbHelper.registerUserHelper("John Doe", "john@example.com", "password123");
   ```
 
-- **Retrieve**:
-  ```java
-  Cursor cursor = dbHelper.getUserByEmail("john@example.com");
-  if (cursor.moveToFirst()) {
-      String name = cursor.getString(cursor.getColumnIndex("name"));
-      String email = cursor.getString(cursor.getColumnIndex("email"));
-      String password = cursor.getString(cursor.getColumnIndex("password"));
-      // Use the retrieved data
-  }
-  ```
-
 - **Update**:
   ```java
   int rowsAffected = dbHelper.updateUserEmail("john@example.com", "john.doe@example.com");
@@ -143,3 +156,4 @@ public class DbHelper extends SQLiteOpenHelper {
   int rowsAffected = dbHelper.deleteUserByEmail("john.doe@example.com");
   ```
 ```
+

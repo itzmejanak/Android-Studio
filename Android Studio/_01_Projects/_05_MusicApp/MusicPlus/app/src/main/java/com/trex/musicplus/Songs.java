@@ -2,12 +2,12 @@ package com.trex.musicplus;
 
 public class Songs {
     private String title;
-    private int duration;
+    private String duration;
     private int icon;
     private String folder_name;
     private int folder_length;
 
-    public Songs(String title, int duration, int icon) {
+    public Songs(String title, String duration, int icon) {
         this.title = title;
         this.duration = duration;
         this.icon = icon;
@@ -22,7 +22,7 @@ public class Songs {
         return title;
     }
 
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
 

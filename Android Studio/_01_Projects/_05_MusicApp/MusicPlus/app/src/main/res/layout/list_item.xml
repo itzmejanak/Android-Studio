@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
+    android:gravity="center"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:paddingBottom="30dp">
 
     <ImageView
         android:id="@+id/music_icon"
@@ -22,15 +24,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Song Title"
-            android:textSize="16sp"
-            android:textColor="#000" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/Duration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Duration"
-            android:textSize="14sp"
-            android:textColor="#666" />
+            android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

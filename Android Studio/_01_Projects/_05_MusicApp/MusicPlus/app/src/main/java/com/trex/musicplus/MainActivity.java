@@ -1,10 +1,15 @@
 package com.trex.musicplus;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -13,7 +18,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
     FrameLayout FrameLayoutOne;
-
+    private final int REQUEST_MEDIA_CODE = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +31,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         FrameLayoutOne = (FrameLayout) findViewById(R.id.FrameLayoutOne);
+        checkPermission();
+    }
 
-        // Check if savedInstanceState is null to avoid overlapping fragments
-        if (savedInstanceState == null) {
+    void checkPermission(){
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_MEDIA_AUDIO) == PackageManager.PERMISSION_GRANTED) {
+            Intent intent = new Intent(this, MainActivityTwo.class);
+
+            startActivity(intent);
+        } else {
             FragmentManager manager = getSupportFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.add(R.id.FrameLayoutOne, new PageOne());
