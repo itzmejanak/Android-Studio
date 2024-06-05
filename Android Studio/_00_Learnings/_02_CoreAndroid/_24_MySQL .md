@@ -24,35 +24,15 @@
 1. **IDE**
 2. **XAMPP**
 
+### Working of app and api
 
-
-working of app and api
 ![app_api](../_00_Diagrams/app_api_database.png)
 
+### How to Connect Mobile to Laptop and Run the API on Mobile
 
-
-
-
-
-=> How to connect mobile to laptop and run the API in mobile :-
-1. Connect laptop and mobile to same wifi device OR connect mobile hotspot to laptop
-2. Open CMD and run as administrator
-3. Type command ‘ipconfig’ and copy the IPv4 Address and paste it in the API URL / link
-4. http://localhost:8084/ApiDemo1/Register => http://192.168.1.3:8084/ApiDemo1/Register
-5. Run this link in the mobile browser
-=> Volley Library :-
-= Volley is an HTTP library which is developed by google and was introduced first in 2013
-= Its main use is to transmit the data over the network
-= It is available through AOSP (Android Open Source Project) repository and thus we have to provide its implementation in
-= Advantages of Volley :-
-1. Provides efficient network manegement
-2. Easier and faster request management
-3. Caching
-= Classes in Volley Library :-
-1. RequestQueue
-2. Request
-= Types of Requests :-
-1. StringRequest
-2. JsonObjectRequest
-3. JsonArrayRequest
-4. ImageRequest I
+1. Connect the laptop and mobile to the same Wi-Fi device OR connect the mobile hotspot to the laptop.
+2. Open CMD and run as administrator.
+3. Type the command `ipconfig` and copy the IPv4 Address. Paste it in the API URL/link.
+4. Convert `http://localhost:8084/ApiDemo1/Register` to `http://<IPv4 Address>:8084/ApiDemo1/Register`.
+   - Example: `http://localhost:8084/ApiDemo1/Register` becomes `http://192.168.1.3:8084/ApiDemo1/Register`.
+5. Run this link in the mobile browser.
