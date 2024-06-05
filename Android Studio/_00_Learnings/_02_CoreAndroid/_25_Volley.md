@@ -23,8 +23,8 @@
 4. **ImageRequest**
 
 
-Note:
-Their may come issue about your Android app is trying to connect to a local server using HTTP (non-secure connection), but Android versions 9 (API level 28) and above block non-secure HTTP connections by default for security reasons.
+### Note:
+- Their may come issue about your Android app is trying to connect to a local server using HTTP (non-secure connection), but Android versions 9 (API level 28) and above block non-secure HTTP connections by default for security reasons.
 
 ### To fix this issue we have to do this:
 
