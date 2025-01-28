@@ -1,0 +1,39 @@
+i am bulding the flutter application for that i have mind map and i have one github froked flutter project at first i will give you my idea then ask to for forked repo according to that we will discussed the problems and get slolution from that repo ok
+
+To render the descriptive text md along with the generated Mermaid diagram in your Flutter application, what i can do
+
+how the markdown text is being render to user as preview mode (including text, diagrams, maths)\
+
+
+Input:
+### Database Overview
+
+A **database** is an organized collection of data stored electronically, managed by a Database Management System (DBMS).
+
+### Mathematical Representation
+
+A database can be represented as a set of relations (tables):
+
+- **Relation (Table)**: $$ R(A_1, A_2, \ldots, A_n) $$
+- **Tuple (Row)**: $$ t = (v_1, v_2, \ldots, v_n) $$
+- **Attribute (Column)**: $$ A_i $$
+
+### Mermaid Code for Tables
+
+```mermaid
+erDiagram
+    USERS {
+        int id PK
+        string name
+        string email
+    }
+    POSTS {
+        int id PK
+        string title
+        string content
+        int user_id FK
+    }
+    USERS ||--o{ POSTS : has
+```
+
+This code illustrates a one-to-many relationship where one user can have multiple posts.

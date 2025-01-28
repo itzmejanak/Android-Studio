@@ -1,0 +1,255 @@
+2024-08-02T14:44:12.415+0545 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [--add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.invoke=ALL-UNNAMED, --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, -Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=GB, -Duser.language=en, -Duser.variant]
+2024-08-02T14:44:12.553+0545 [DEBUG] [org.gradle.internal.nativeintegration.services.NativeServices] Native-platform posix files integration is not available. Continuing with fallback.
+2024-08-02T14:44:12.565+0545 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=ebbd4c39-ca5c-4948-96a8-7794b61726be,javaHome=C:\Program Files\Android\Android Studio\jbr,daemonRegistryDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\daemon,pid=6316,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=GB,-Duser.language=en,-Duser.variant]
+2024-08-02T14:44:12.617+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Software Loopback Interface 1
+2024-08-02T14:44:12.619+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2024-08-02T14:44:12.619+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2024-08-02T14:44:12.619+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1
+2024-08-02T14:44:12.620+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft 6to4 Adapter
+2024-08-02T14:44:12.622+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.623+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Bluetooth Device (Personal Area Network)
+2024-08-02T14:44:12.624+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.625+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:ded:db4d:47fa:db35%eth0
+2024-08-02T14:44:12.625+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (PPPOE)
+2024-08-02T14:44:12.627+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.627+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2
+2024-08-02T14:44:12.628+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.628+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:eec5:e687:9511:8467%wlan0
+2024-08-02T14:44:12.628+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft IP-HTTPS Platform Adapter
+2024-08-02T14:44:12.629+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.630+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IKEv2)
+2024-08-02T14:44:12.631+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.631+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (L2TP)
+2024-08-02T14:44:12.632+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.632+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (SSTP)
+2024-08-02T14:44:12.633+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.634+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter
+2024-08-02T14:44:12.635+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.635+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:5475:24d8:5749:6643%wlan1
+2024-08-02T14:44:12.635+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Kernel Debug Network Adapter
+2024-08-02T14:44:12.636+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.636+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)
+2024-08-02T14:44:12.638+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.638+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Realtek PCIe GbE Family Controller
+2024-08-02T14:44:12.639+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.640+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:64c:600a:8388:e2d3%eth3
+2024-08-02T14:44:12.640+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)
+2024-08-02T14:44:12.641+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.641+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Teredo Tunneling Adapter
+2024-08-02T14:44:12.642+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.643+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wireless-AC 9462
+2024-08-02T14:44:12.644+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.644+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /192.168.1.4
+2024-08-02T14:44:12.644+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /2407:1400:aa5b:5de0:9cfd:e75d:43e8:a412
+2024-08-02T14:44:12.644+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /2407:1400:aa5b:5de0:91b1:a6a1:bc13:fa88
+2024-08-02T14:44:12.644+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:813d:aeba:cfff:c7fe%wlan2
+2024-08-02T14:44:12.644+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)
+2024-08-02T14:44:12.645+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.645+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (PPTP)
+2024-08-02T14:44:12.646+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.646+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Realtek PCIe GbE Family Controller-WFP Native MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.648+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.648+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Realtek PCIe GbE Family Controller-QoS Packet Scheduler-0000
+2024-08-02T14:44:12.649+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.650+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Realtek PCIe GbE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.651+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.651+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wireless-AC 9462-WFP Native MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.652+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.652+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wireless-AC 9462-Virtual WiFi Filter Driver-0000
+2024-08-02T14:44:12.654+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.654+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wireless-AC 9462-Native WiFi Filter Driver-0000
+2024-08-02T14:44:12.655+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.655+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wireless-AC 9462-QoS Packet Scheduler-0000
+2024-08-02T14:44:12.656+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.656+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Intel(R) Wireless-AC 9462-WFP 802.3 MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.657+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.658+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.659+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.659+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000
+2024-08-02T14:44:12.660+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.660+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.661+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.662+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IP)-QoS Packet Scheduler-0000
+2024-08-02T14:44:12.663+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.663+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.664+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.664+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+2024-08-02T14:44:12.665+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.665+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.666+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.666+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+2024-08-02T14:44:12.668+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.668+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000
+2024-08-02T14:44:12.670+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.670+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.671+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.672+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.673+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.673+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000
+2024-08-02T14:44:12.675+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.675+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000
+2024-08-02T14:44:12.676+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.676+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000
+2024-08-02T14:44:12.677+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-08-02T14:44:12.682+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]].
+2024-08-02T14:44:12.696+0545 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Fri Aug 02 14:44:12 NPT 2024, with address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:44:12.696+0545 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:44:12.696+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=ebbd4c39-ca5c-4948-96a8-7794b61726be,javaHome=C:\Program Files\Android\Android Studio\jbr,daemonRegistryDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\daemon,pid=6316,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=GB,-Duser.language=en,-Duser.variant]
+2024-08-02T14:44:12.697+0545 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=ebbd4c39-ca5c-4948-96a8-7794b61726be,javaHome=C:\Program Files\Android\Android Studio\jbr,daemonRegistryDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\daemon,pid=6316,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=GB,-Duser.language=en,-Duser.variant]
+2024-08-02T14:44:12.706+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-08-02T14:44:12.708+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:44:12.712+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:44:12.712+0545 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2024-08-02T14:44:12.713+0545 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2024-08-02T14:44:12.716+0545 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2024-08-02T14:44:12.717+0545 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2024-08-02T14:44:12.717+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-08-02T14:44:12.721+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:54285 to /127.0.0.1:54284.
+2024-08-02T14:44:12.768+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 22: received class org.gradle.launcher.daemon.protocol.Build
+2024-08-02T14:44:12.768+0545 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 22: Received non-IO message from client: Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus}
+2024-08-02T14:44:12.768+0545 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus}.
+2024-08-02T14:44:12.768+0545 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus} with connection: socket connection from /127.0.0.1:54284 to /127.0.0.1:54285.
+2024-08-02T14:44:12.770+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:54284 to /127.0.0.1:54285] after 0.0 minutes of idle
+2024-08-02T14:44:12.770+0545 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:44:12.770+0545 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:44:12.771+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-08-02T14:44:12.772+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:44:12.773+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:44:12.773+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-08-02T14:44:12.773+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-08-02T14:44:12.774+0545 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus}. Dispatching build started information...
+2024-08-02T14:44:12.774+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 24: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@3f1dcf79
+2024-08-02T14:44:12.775+0545 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [USERDOMAIN_ROAMINGPROFILE, PROCESSOR_LEVEL, SESSIONNAME, ALLUSERSPROFILE, PROCESSOR_ARCHITECTURE, __COMPAT_LAYER, PSModulePath, SystemDrive, PT8HOME, USERNAME, ffmpeg, ProgramFiles(x86), FPS_BROWSER_USER_PROFILE_STRING, PATHEXT, DriverData, ProgramData, ProgramW6432, HOMEPATH, PROCESSOR_IDENTIFIER, ProgramFiles, PUBLIC, windir, =::, ZES_ENABLE_SYSMAN, IGCCSVC_DB, LOCALAPPDATA, IntelliJ IDEA, USERDOMAIN, LOGONSERVER, FPS_BROWSER_APP_PROFILE_STRING, JAVA_HOME, OneDrive, APPDATA, ChocolateyInstall, CommonProgramFiles, Path, OS, COMPUTERNAME, PROCESSOR_REVISION, CommonProgramW6432, ComSpec, TEMP, SystemRoot, HOMEDRIVE, USERPROFILE, TMP, CommonProgramFiles(x86), NUMBER_OF_PROCESSORS, IDEA_INITIAL_DIRECTORY]
+2024-08-02T14:44:12.777+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 22: received class org.gradle.launcher.daemon.protocol.CloseInput
+2024-08-02T14:44:12.777+0545 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 22: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@50f4f2d7
+2024-08-02T14:44:12.780+0545 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2024-08-02T14:44:12.780+0545 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 6316). The daemon log file: C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\daemon\8.7\daemon-6316.out.log
+2024-08-02T14:44:12.782+0545 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 2 GiB]
+2024-08-02T14:44:12.785+0545 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] Closing daemon's stdin at end of input.
+2024-08-02T14:44:12.785+0545 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] The daemon will no longer process any standard input.
+2024-08-02T14:44:12.786+0545 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2024-08-02T14:44:12.786+0545 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=ebbd4c39-ca5c-4948-96a8-7794b61726be,javaHome=C:\Program Files\Android\Android Studio\jbr,daemonRegistryDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\daemon,pid=6316,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=GB,-Duser.language=en,-Duser.variant]
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Build cancelled.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 49s
+2024-08-02T14:45:01.363+0545 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2024-08-02T14:45:01.373+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is busy, sleeping until state changes.
+2024-08-02T14:45:01.373+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:54284 to /127.0.0.1:54285]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@bb4a1c8 with state Canceled
+2024-08-02T14:45:01.373+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:54284 to /127.0.0.1:54285]
+2024-08-02T14:45:01.374+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-08-02T14:45:01.374+0545 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:45:01.374+0545 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:45:01.376+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-08-02T14:45:01.384+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:01.385+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:01.386+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is idle now.
+2024-08-02T14:45:01.386+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-08-02T14:45:01.386+0545 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@4b875d9e]
+2024-08-02T14:45:01.387+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 21: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@4b875d9e]
+2024-08-02T14:45:01.403+0545 [DEBUG] [org.gradle.launcher.daemon.server.exec.CleanUpVirtualFileSystemAfterBuild] Cleaning virtual file system after build finished
+2024-08-02T14:45:01.419+0545 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=b7f628f1-bd89-4ce0-a188-a7f183872d9b, currentDir=C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus}
+2024-08-02T14:45:01.434+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 22: received class org.gradle.launcher.daemon.protocol.Finished
+2024-08-02T14:45:01.434+0545 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 22: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@60067b0a
+2024-08-02T14:45:01.435+0545 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2024-08-02T14:45:01.435+0545 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@60067b0a
+2024-08-02T14:45:01.435+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 22: received null
+2024-08-02T14:45:01.435+0545 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 22: Received end-of-input from client.
+2024-08-02T14:45:01.435+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 21: stopping connection
+2024-08-02T14:45:01.437+0545 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 21: stopping connection
+2024-08-02T14:45:02.742+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-08-02T14:45:02.772+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] The file lock for daemon addresses registry is held by a different Gradle process. I was unable to read on which port the owner listens for lock access requests.
+2024-08-02T14:45:02.773+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:02.773+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:02.774+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-08-02T14:45:02.775+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:02.775+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:03.183+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Lock on journal cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\journal-1) requested by another process - releasing lock.
+2024-08-02T14:45:03.183+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for journal cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\journal-1)
+2024-08-02T14:45:03.183+0545 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache file-access.bin (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\journal-1\file-access.bin)
+2024-08-02T14:45:03.183+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on journal cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\journal-1).
+2024-08-02T14:45:03.184+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id 3104452561621308005.
+2024-08-02T14:45:03.184+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id 3104452561621308005.
+2024-08-02T14:45:03.213+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Lock on file hash cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileHashes) requested by another process - releasing lock.
+2024-08-02T14:45:03.213+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileHashes)
+2024-08-02T14:45:03.213+0545 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileHashes\fileHashes.bin)
+2024-08-02T14:45:03.213+0545 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resourceHashesCache.bin (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileHashes\resourceHashesCache.bin)
+2024-08-02T14:45:03.214+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileHashes).
+2024-08-02T14:45:03.214+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id -6195759296850581761.
+2024-08-02T14:45:03.215+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id -6195759296850581761.
+2024-08-02T14:45:04.382+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Lock on file content cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileContent) requested by another process - releasing lock.
+2024-08-02T14:45:04.383+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file content cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileContent)
+2024-08-02T14:45:04.383+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file content cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\fileContent).
+2024-08-02T14:45:04.383+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id -579280179105528071.
+2024-08-02T14:45:04.384+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id -579280179105528071.
+2024-08-02T14:45:05.513+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Lock on Generated Gradle JARs cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\generated-gradle-jars) requested by another process - releasing lock.
+2024-08-02T14:45:05.513+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for Generated Gradle JARs cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\generated-gradle-jars)
+2024-08-02T14:45:05.513+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Generated Gradle JARs cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\generated-gradle-jars).
+2024-08-02T14:45:05.514+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53677 for lock with id 227854483927556762.
+2024-08-02T14:45:05.514+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53677 for lock with id 227854483927556762.
+2024-08-02T14:45:06.749+0545 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherProbeRegistry] Triggering watch probe for C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus
+2024-08-02T14:45:06.749+0545 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherProbeRegistry] Triggering watch probe for C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus
+2024-08-02T14:45:06.816+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Lock on artifact cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\modules-2) requested by another process - releasing lock.
+2024-08-02T14:45:06.817+0545 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for artifact cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\modules-2)
+2024-08-02T14:45:06.817+0545 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resource-at-url.bin (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\modules-2\metadata-2.106\resource-at-url.bin)
+2024-08-02T14:45:06.817+0545 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-artifact.bin (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\modules-2\metadata-2.106\module-artifact.bin)
+2024-08-02T14:45:06.817+0545 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\modules-2\metadata-2.106\module-metadata.bin)
+2024-08-02T14:45:06.817+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\modules-2).
+2024-08-02T14:45:06.818+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id 1680158026344896662.
+2024-08-02T14:45:06.818+0545 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 53678 for lock with id 1680158026344896662.
+2024-08-02T14:45:06.967+0545 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherProbeRegistry] Triggering watch probe for C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus
+2024-08-02T14:45:06.967+0545 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherProbeRegistry] Triggering watch probe for C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus
+2024-08-02T14:45:12.738+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-08-02T14:45:12.738+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:12.738+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:12.739+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-08-02T14:45:12.739+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:12.739+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:12.740+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-08-02T14:45:12.740+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:12.740+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:12.741+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-08-02T14:45:12.741+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:12.741+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:12.741+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: other compatible daemons were started and after being idle for 0 minutes and not recently used
+2024-08-02T14:45:12.742+0545 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1722589212738
+2024-08-02T14:45:12.743+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-08-02T14:45:12.743+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:12.744+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:12.745+0545 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build other compatible daemons were started and after being idle for 0 minutes and not recently used
+2024-08-02T14:45:12.745+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to other compatible daemons were started and after being idle for 0 minutes and not recently used. The daemon is running a build: false
+2024-08-02T14:45:12.745+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2024-08-02T14:45:12.745+0545 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2024-08-02T14:45:12.745+0545 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2024-08-02T14:45:12.745+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:45:12.745+0545 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:45:12.746+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-08-02T14:45:12.746+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:12.747+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:12.747+0545 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2024-08-02T14:45:12.748+0545 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] jars (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\jars-9) has last been fully cleaned up 4 hours ago
+2024-08-02T14:45:12.748+0545 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache jars (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\jars-9) was closed 0 times.
+2024-08-02T14:45:12.749+0545 [DEBUG] [org.gradle.internal.watch.vfs.impl.WatchingVirtualFileSystem] Closing VFS, dropping state
+2024-08-02T14:45:12.750+0545 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry] Finished listening to file system change events
+2024-08-02T14:45:12.750+0545 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] Artifact transforms cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\transforms-4) has last been fully cleaned up 4 hours ago
+2024-08-02T14:45:12.750+0545 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Artifact transforms cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\transforms-4) was closed 0 times.
+2024-08-02T14:45:12.750+0545 [DEBUG] [org.gradle.cache.internal.DefaultPersistentDirectoryStore] artifact cache (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\modules-2) has last been fully cleaned up 4 hours ago
+2024-08-02T14:45:12.751+0545 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache groovy-dsl (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\groovy-dsl) was closed 0 times.
+2024-08-02T14:45:12.751+0545 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache kotlin-dsl (C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches\8.7\kotlin-dsl) was closed 0 times.
+2024-08-02T14:45:12.762+0545 [DEBUG] [org.gradle.cache.internal.VersionSpecificCacheCleanupAction] Processed version-specific caches at C:\Users\janak\OneDrive\Desktop\Android Studio\Android Studio\_01_Projects\_05_MusicApp\MusicPlus\caches for cleanup in 0.009 secs
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2024-08-02T14:45:12.768+0545 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [a4c128b1-d6c7-4b2c-9c75-3a5b40040279 port:54284, addresses:[localhost/127.0.0.1]]
+2024-08-02T14:45:12.769+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-08-02T14:45:12.769+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-08-02T14:45:12.770+0545 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-08-02T14:45:12.770+0545 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Gradle process at port 53678 confirmed unlock request for lock with id 7692277599485658531.
+2024-08-02T14:45:12.770+0545 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Gradle process at port 53678 confirmed unlock request for lock with id 7692277599485658531.

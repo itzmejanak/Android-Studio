@@ -126,7 +126,7 @@ public class Temp extends Fragment implements View.OnClickListener {
     }
 
 
-    private void updateSongInfo() {
+    public void updateSongInfo() {
         if (mainActivity != null) {
             String songPath = mainActivity.getCurrentSongName();
             String songName = getSongNameFromPath(songPath);
@@ -168,4 +168,7 @@ public class Temp extends Fragment implements View.OnClickListener {
     void changeLove(View view) {
         emoji.setText("❤\uFE0F");
     }
+
+
+
 }

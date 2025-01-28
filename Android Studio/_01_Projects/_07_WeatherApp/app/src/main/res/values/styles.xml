@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Define custom search view style -->
+    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@drawable/rounded_background</item> <!-- Set your custom background here -->
+        <item name="android:paddingStart">8dp</item> <!-- Adjust padding as needed -->
+        <item name="android:paddingEnd">8dp</item> <!-- Adjust padding as needed -->
+        <item name="android:queryBackground">@android:color/transparent</item> <!-- Transparent query background -->
+        <item name="android:searchIcon">@drawable/location</item> <!-- Custom search icon -->
+        <item name="android:closeIcon">@drawable/close</item> <!-- Custom close icon -->
+        <item name="android:queryHint">@string/search_hint</item> <!-- Custom query hint -->
+        <item name="android:iconifiedByDefault">false</item> <!-- Show search icon by default -->
+        <item name="android:theme">@style/CustomSearchViewTheme</item> <!-- Custom theme -->
+    </style>
+
+    <!-- Define custom search view theme -->
+    <style name="CustomSearchViewTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:editTextColor">@android:color/white</item> <!-- Set text color -->
+        <item name="android:textColorHint">@android:color/white</item> <!-- Set hint color -->
+        <item name="android:textCursorDrawable">@null</item> <!-- Remove cursor -->
+        <item name="android:fontFamily">@font/semibold</item> <!-- Set text color -->
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <!-- Customize your light mode theme attributes here -->
+        <item name="android:windowBackground">@color/main_theme</item>
+        <item name="android:textColor">@color/black</item>
+        <!-- Add more attributes as needed -->
+    </style>
+
+
 </resources>

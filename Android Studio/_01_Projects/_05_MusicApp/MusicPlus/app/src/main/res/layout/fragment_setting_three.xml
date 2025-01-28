@@ -1,4 +1,5 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,11 +7,6 @@
     tools:context=".MainActivity">
 
     <!-- Developer Image -->
-
-    <!-- About Section -->
-
-    <!-- Developer Description -->
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image"
         android:layout_width="96dp"
@@ -20,10 +16,10 @@
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- About Section -->
     <TextView
         android:id="@+id/aboutSection"
         android:layout_width="wrap_content"
@@ -34,15 +30,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profile_image" />
 
-    <!-- Feedback Section -->
-
-    <!-- Rate Section -->
-
-    <!-- Donate Section -->
+    <!-- Developer Description -->
     <TextView
         android:id="@+id/developerDescription"
         android:layout_width="0dp"
@@ -52,30 +43,13 @@
         android:paddingTop="8dp"
         android:paddingRight="40dp"
         android:paddingBottom="8dp"
-        android:text="I'm Janak Devkota, studying software and web development at London Metropolitan University. Passionate about coding and problem-solving, I'm driven to innovate in this field."
+        android:text="I'm [Software Developer] with no name [😎], studying software and web development at London Metropolitan University. Passionate about coding and problem-solving, I'm driven to innovate in this field."
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/aboutSection" />
 
-    <TextView
-        android:id="@+id/feedbackSection"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/feed_back"
-        android:drawablePadding="30dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="Feedback"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userRatingBar" />
-
+    <!-- Rating Section -->
     <RatingBar
         android:id="@+id/userRatingBar"
         android:layout_width="wrap_content"
@@ -86,13 +60,30 @@
         android:rating="0"
         android:stepSize="1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/developerDescription" />
+        app:layout_constraintTop_toBottomOf="@id/developerDescription" />
 
+    <!-- Feedback Section -->
+    <TextView
+        android:id="@+id/feedbackSection"
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/feed_back"
+        android:drawablePadding="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Feedback"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userRatingBar" />
+
+    <!-- Donate Section -->
     <TextView
         android:id="@+id/donateSection"
-        android:layout_width="411dp"
+        android:layout_width="351dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/donate"
@@ -103,56 +94,69 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedbackSection" />
+        app:layout_constraintTop_toBottomOf="@id/feedbackSection" />
 
-    <ImageView
-        android:id="@+id/linkdin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:src="@drawable/link"
-        app:layout_constraintBottom_toBottomOf="@+id/github"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/github"
-        app:layout_constraintVertical_bias="0.0" />
+    <!-- Website Link -->
 
-    <ImageView
-        android:id="@+id/insta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="144dp"
-        android:src="@drawable/insta"
-        app:layout_constraintBottom_toBottomOf="@+id/github"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/github"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/github"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:src="@drawable/git"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/insta"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/linkdin"
-        app:layout_constraintTop_toBottomOf="@+id/website" />
+    <!-- Social Media Links -->
 
     <TextView
         android:id="@+id/website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/website"
-        android:drawablePadding="20dp"
+        android:drawablePadding="30dp"
+        android:layout_marginLeft="7dp"
         android:text="Visit my website"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donateSection" />
+        app:layout_constraintTop_toBottomOf="@id/donateSection" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/website">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/linkdin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link" />
+
+            <ImageView
+                android:id="@+id/github"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/git" />
+
+            <ImageView
+                android:id="@+id/insta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/insta" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

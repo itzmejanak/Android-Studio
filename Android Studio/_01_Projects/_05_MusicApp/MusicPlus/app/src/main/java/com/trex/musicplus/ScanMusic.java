@@ -2,13 +2,14 @@ package com.trex.musicplus;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.media.MediaMetadataRetriever;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ScanMusic extends AsyncTask<Void, Void, Boolean> {
 
@@ -62,9 +63,31 @@ public class ScanMusic extends AsyncTask<Void, Void, Boolean> {
                     if (file.isDirectory()) {
                         getAllMusicPaths(file); // Recursively search in subdirectories
                     } else if (file.isFile() && file.getName().endsWith(".mp3")) {
-                        musicPaths.add(file.getAbsolutePath());
+                        // Check the duration of the file
+                        if (isValidDuration(file.getAbsolutePath())) {
+                            musicPaths.add(file.getAbsolutePath());
+                        }
                     }
                 }
+            }
+        }
+    }
+
+    private boolean isValidDuration(String filePath) {
+        MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+        try {
+            mmr.setDataSource(filePath);
+            String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+            int duration = durationStr != null ? Integer.parseInt(durationStr) : 0;
+            return duration >= 30000; // 30 seconds = 30000 milliseconds
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            try {
+                mmr.release();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }

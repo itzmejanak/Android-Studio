@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -16,22 +17,19 @@ import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.tabs.TabLayout;
-import com.trex.musicplus.Folders;
-import com.trex.musicplus.List;
-import com.trex.musicplus.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MainActivityTwo extends AppCompatActivity implements ScanMusic.ScanMusicCallback{
+public class MainActivityTwo extends AppCompatActivity implements ScanMusic.ScanMusicCallback {
 
     private TabLayout tabLayout;
     public FrameLayout frameLayout;
@@ -44,6 +42,7 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
     TextView changeText;
     ImageView search, menu;
     SearchView search_view;
+    Temp temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +57,24 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
             return insets;
         });
 
+        temp = new Temp();
+
         // Initialize tab layout and frame layout
         tabLayout = findViewById(R.id.tabLayout);
         frameLayout = findViewById(R.id.frameLayout);
         changeText = findViewById(R.id.changeText);
-        menu = findViewById(R.id.imageView13);
+        menu = findViewById(R.id.goList);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeText.setText("List");
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.frameLayout, new List());
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
         search = findViewById(R.id.imageView14);
         search.setOnClickListener(this::closeMenu);
 
@@ -99,6 +111,7 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
             @Override
             public void onTabReselected(TabLayout.Tab tab) {}
         });
+
         if (musicPaths.size() == 0) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_AUDIO) == PackageManager.PERMISSION_GRANTED) {
                 new ScanMusic(this, this).execute();
@@ -134,8 +147,8 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
             changeText.setText("List");
             getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new List()).commit();
         } else if (selectedTabPosition == 2) {
-            changeText.setText("Folders");
-            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new Folders()).commit();
+            changeText.setText("Playing");
+            getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new Temp()).commit();
         }
     }
 
@@ -148,16 +161,15 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
                 if (mediaPlayer == null) {
                     initMediaPlayer();
                     selectRandomTrack();
+                    temp.updateSongInfo();
                 }
             }
         } else {
             // Handle the case where permission is not granted
             // You might want to request permission here or show a message to the user
             requestPermissionLauncher.launch(Manifest.permission.READ_MEDIA_AUDIO);
-
         }
     }
-
 
     // Method to pause music
     public void pauseMusic() {
@@ -198,15 +210,33 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
         playCurrentTrack();
     }
 
-    // Play current track
     private void playCurrentTrack() {
-        if (mediaPlayer != null && !musicPaths.isEmpty()) {
+        if (mediaPlayer != null) {
+            mediaPlayer.reset(); // Reset MediaPlayer to prepare for the new track
+        } else {
+            mediaPlayer = new MediaPlayer(); // Initialize MediaPlayer if null
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    // Update the UI thread using a Runnable
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Update the UI
+                            temp.updateSongInfo();
+                            playNextTrack(); // Play the next track
+                        }
+                    });
+                }
+            });
+        }
+
+        if (!musicPaths.isEmpty() && currentIndex >= 0 && currentIndex < musicPaths.size()) {
             try {
-                mediaPlayer.reset();
                 mediaPlayer.setDataSource(musicPaths.get(currentIndex));
-                mediaPlayer.prepare();
-                mediaPlayer.start();
-//                showToast("Playing " + musicPaths.get(currentIndex));
+                mediaPlayer.prepare(); // Prepare MediaPlayer asynchronously
+                mediaPlayer.start(); // Start playback
+                showToast("Playing");
             } catch (IOException e) {
                 e.printStackTrace();
                 showToast("Error playing track");
@@ -252,26 +282,22 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
         return 0;
     }
 
-    // Inside MainActivityTwo class
-
     public void playMusicFromIndex(int index) {
         // Implement your logic to play music from the specified index
         // For example:
         if (index >= 0 && index < musicPaths.size()) {
             currentIndex = index;
             playCurrentTrack(); // Assuming this method plays the track at currentIndex
-
         } else {
             // Handle the case where the index is out of bounds
             Toast.makeText(this, "Invalid index", Toast.LENGTH_SHORT).show();
         }
     }
 
-    void closeMenu(View view){
+    void closeMenu(View view) {
         Intent intent = new Intent(this, Search.class);
         startActivity(intent);
     }
-
 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
@@ -279,6 +305,15 @@ public class MainActivityTwo extends AppCompatActivity implements ScanMusic.Scan
 
     @Override
     public void onScanCompleted(boolean hasMusicFiles, int totalFiles) {
-
+        // Implementation for scan completion callback
     }
+
+
+    //    // Handle intent to play song from Search activity
+//        Intent intent = getIntent();
+//        if (intent != null && intent.hasExtra("song_index")) {
+//            currentIndex = intent.getIntExtra("song_index", -1);
+//                playCurrentTrack();
+//        }
+
 }

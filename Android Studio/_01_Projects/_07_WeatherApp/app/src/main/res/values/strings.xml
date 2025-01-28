@@ -1,3 +1,93 @@
 <resources>
     <string name="app_name">SkyScout</string>
+    <string name="welcome_message">You Welcome Here</string>
+    <string name="loading">Loading</string>
+    <string name="developer">Developer: Janak Devkota</string>
+    <string name="search_hint">Search City</string>
+    <string name="updating">Updating</string>
+    <string name="wind">Wind</string>
+    <string name="humidity">Humidity</string>
+    <string name="rain">Rain</string>
+    <string name="today">Today</string>
+    <string name="seven_days">7 Days</string>
+    <string name="tomorrow">Tomorrow</string>
+
+    <!-- Default Data for Current weather -->
+    <string name="temperature">23°</string>
+    <string name="weather">ThunderClouds</string>
+    <string name="wind_speed">13km/h</string>
+    <string name="humidity_value">60%</string>
+    <string name="rain_value">30%</string>
+
+
+    <!-- Default Data for Current Weather Hourly -->
+    <!-- For 10:00 -->
+    <string name="time1">10:00</string>
+    <string name="time1_temp">47°</string>
+
+    <!-- For 11:00 -->
+    <string name="time2">11:00</string>
+    <string name="time2_temp">48°</string>
+
+    <!-- For 12:00 -->
+    <string name="time3">12:00</string>
+    <string name="time3_temp">50°</string>
+
+    <!-- For 13:00 -->
+    <string name="time4">13:00</string>
+    <string name="time4_temp">51°</string>
+
+
+    <!-- Default Data for Tomorrow -->
+    <string name="date_day">20</string>
+    <string name="tomorrow_temp">/23°</string>
+    <string name="tomorrow_weather">ThunderClouds</string>
+    <string name="tomorrow_wind_speed">17km/h</string>
+    <string name="tomorrow_humidity_value">30%</string>
+    <string name="tomorrow_rain_value">70%</string>
+
+    <!-- Default Data for 7 Days -->
+    <!-- For Sunday -->
+    <string name="day1">Sun</string>
+    <string name="day1_weather">Sunny</string>
+    <string name="day1_max_temp">30°</string>
+    <string name="day1_min_temp">20°</string>
+
+    <!-- For Monday -->
+    <string name="day2">Mon</string>
+    <string name="day2_weather">Partly Cloudy</string>
+    <string name="day2_max_temp">28°</string>
+    <string name="day2_min_temp">19°</string>
+
+    <!-- For Tuesday -->
+    <string name="day3">Tue</string>
+    <string name="day3_weather">Rain</string>
+    <string name="day3_max_temp">22°</string>
+    <string name="day3_min_temp">16°</string>
+
+    <!-- For Wednesday -->
+    <string name="day4">Wed</string>
+    <string name="day4_weather">Thunderstorm</string>
+    <string name="day4_max_temp">25°</string>
+    <string name="day4_min_temp">18°</string>
+
+    <!-- For Thursday -->
+    <string name="day5">Thu</string>
+    <string name="day5_weather">Cloudy</string>
+    <string name="day5_max_temp">24°</string>
+    <string name="day5_min_temp">17°</string>
+
+    <!-- For Friday -->
+    <string name="day6">Fri</string>
+    <string name="day6_weather">Windy</string>
+    <string name="day6_max_temp">27°</string>
+    <string name="day6_min_temp">21°</string>
+
+    <!-- For Saturday -->
+    <string name="day7">Sat</string>
+    <string name="day7_weather">Snow</string>
+    <string name="day7_max_temp">5°</string>
+    <string name="day7_min_temp">-2°</string>
+
+
 </resources>

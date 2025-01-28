@@ -5,20 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivityTwo">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:background="?attr/colorPrimary"
         android:backgroundTint="@android:color/transparent"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/changeText"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/tab_text_color"
         app:tabMode="fixed"
@@ -41,13 +40,6 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/folder"
-            android:text="Folders"
-            app:tabTextColor="@color/tab_unselected_color" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:icon="@drawable/music_icon_actthree"
             android:text="Play"
             app:tabTextColor="@color/tab_unselected_color" />
@@ -56,41 +48,35 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/changeText"
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-        app:layout_constraintVertical_bias="0.00999999" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/goList"
         android:layout_width="18dp"
         android:layout_height="15dp"
         android:layout_marginStart="28dp"
         app:layout_constraintBottom_toBottomOf="@+id/changeText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/changeText"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/menu_toggle" />
 
     <TextView
         android:id="@+id/changeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="Home"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.424"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toEndOf="@+id/goList"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <ImageView
         android:id="@+id/imageView14"
@@ -98,10 +84,10 @@
         android:layout_height="21dp"
         app:layout_constraintBottom_toBottomOf="@+id/changeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toEndOf="@+id/changeText"
         app:layout_constraintTop_toTopOf="@+id/changeText"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/search_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

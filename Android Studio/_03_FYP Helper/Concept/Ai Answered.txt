@@ -1,0 +1,10 @@
+Markdown Content: The Markdown content is processed, with special handling for Wiki-style links and checkboxes.
+HTML Generation: The processed content is converted to HTML, including styles and scripts for rendering Mermaid diagrams and other elements.
+WebView Rendering: The generated HTML is displayed in a WebView, with JavaScript channels handling user interactions and updates.
+
+
+markd: For converting Markdown to HTML.
+webview_flutter: For displaying the generated HTML content in a WebView.
+katex.min.js and mhchem.min.js: For rendering mathematical expressions.
+mermaid.min.js: For rendering Mermaid diagrams.
+prism.js: For syntax highlighting.

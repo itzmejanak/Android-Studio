@@ -7,12 +7,11 @@
     android:layout_gravity="center"
     tools:context=".List">
 
-    <ListView
-        android:id="@+id/myListView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="55dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="1"/>
-
 
 </LinearLayout>

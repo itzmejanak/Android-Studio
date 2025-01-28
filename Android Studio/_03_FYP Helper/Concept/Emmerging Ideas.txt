@@ -1,0 +1,38 @@
+### Different Ways of Note Making:
+- **User Can Create Manual Notes**
+- **User Can Create Notes from YouTube Videos (Using AI)**
+- **User Can Make Notes by Providing Any Webpage URL (Using AI)**
+
+**Note:** Each of these methods will have its own tab, and each tab will contain different folders. We are creating these tabs to support multiple export features for the folder notes.
+
+### Features of Each Method
+
+#### User Can Create Manual Notes
+Here, the user can type their own ideas and knowledge for notes (let's call them static notes).
+
+- **Feature 1:** The user can format and remake their own notes (using AI) without changing the content. We can show a selection menu where users can add hashtags like (Bullets, Paragraph, Table, Diagram (Mermaid)).
+- **Feature 2:** The user can change the tone of the notes (using AI).
+  - **Feature 2.1:** There is an additional feature where the user can write a minimum of 500 words (essay, write-up, etc.) to analyze their tone. If the user wants their own tone in the notes, this can be achieved using AI.
+- **Feature 3:** Every extracted note has the capability to generate flashcards and quizzes. (Note: The generated flashcards and quizzes text are objects of the corresponding note).
+
+#### User Can Create Notes from YouTube Videos (Using AI)
+
+- **Feature 1:** The user can format and remake their generated notes (using AI) without changing the content. We can show a selection menu where users can add hashtags like (Bullets, Paragraph, Table, Diagram (Mermaid)).
+- **Feature 2:** The user can change the tone of the notes (using AI).
+  - **Feature 2.1:** There is an additional feature where the user can write a minimum of 500 words (essay, write-up, etc.) to analyze their tone. If the user wants their own tone in the notes, this can be achieved using AI.
+- **Feature 3:** Every extracted note has the capability to generate flashcards and quizzes. (Note: The generated flashcards and quizzes text are objects of the corresponding note).
+
+#### User Can Make Notes by Providing Any Webpage URL (Using AI)
+Here, the user will provide a specific webpage URL, and the text will be extracted from that page and given to the AI for note-making.
+
+- **Feature 1:** The user can format and remake their extracted notes (using AI) without changing the content. We can show a selection menu where users can add hashtags like (Bullets, Paragraph, Table, Diagram (Mermaid)).
+- **Feature 2:** The user can change the tone of the notes (using AI).
+  - **Feature 2.1:** There is an additional feature where the user can write a minimum of 500 words (essay, write-up, etc.) to analyze their tone. If the user wants their own tone in the notes, this can be achieved using AI.
+- **Feature 3:** Every extracted note has the capability to generate flashcards and quizzes. (Note: The generated flashcards and quizzes text are objects of the corresponding note).
+
+### Export Notes
+In the export notes feature, the user can export their notes into PDF format. The user can also export each note as a separate PDF or combine multiple notes into a single PDF.
+
+### Pin Notes
+Pinned notes will be displayed on the homepage.
+
