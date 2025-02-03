@@ -1,0 +1,98 @@
+async function handleUserInputForDeepSeek() {
+        const userInputElement = document.getElementById('userInput');
+        const message = userInputElement.value.trim();
+        if (message === '') return;
+
+        // Clear welcome message if it exists
+        const welcomeMessage = document.querySelector('.welcome-message');
+        if (welcomeMessage) {
+            welcomeMessage.remove();
+        }
+
+        // Add user message
+        addMessage(message, 'user');
+        
+        // Clear input and adjust height
+        userInputElement.value = '';
+        adjustTextareaHeight();
+
+        // Create an empty bot message that we'll stream into
+        const { messageDiv, contentDiv } = createMessage('', false);
+        const messagesContent = document.querySelector('.chat-messages-content');
+        messagesContent.appendChild(messageDiv);
+        
+        let currentText = '';
+        let displayedText = '';
+        const typingSpeed = 10; // milliseconds per character
+
+        function typeNextCharacter() {
+            if (displayedText.length < currentText.length) {
+                displayedText = currentText.substring(0, displayedText.length + 1);
+                contentDiv.innerHTML = marked.parse(displayedText);
+                
+                // Apply syntax highlighting to code blocks
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+                
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                // Schedule next character
+                setTimeout(typeNextCharacter, typingSpeed);
+            }
+        }
+        
+        // Use fetch with streaming
+       // http://myweb.yzz.me/ChatGPT4o.php?text=<query_here>
+
+        fetch(`http://127.0.0.1:8000/generate?prompt=${encodeURIComponent(message)}`, {
+            method: 'POST'
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Server error: ${response.status}`);
+            }
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+
+            // Recursive function to read stream
+            function readStream() {
+                return reader.read().then(({done, value}) => {
+                    if (done) {
+                        // Save to history when the response is complete
+                        saveToHistory(message, currentText);
+                        return;
+                    }
+                    
+                    // Decode and process the chunk
+                    const chunk = decoder.decode(value);
+                    try {
+                        const jsonResponse = JSON.parse(chunk);
+                        if (jsonResponse.response) {
+                            // Update the current text
+                            currentText = jsonResponse.response;
+                            
+                            // If not already typing, start typing effect
+                            if (displayedText.length === 0) {
+                                typeNextCharacter();
+                            }
+                        }
+                    } catch (error) {
+                        console.error('Error processing chunk:', error);
+                    }
+                    
+                    // Recursively read next chunk
+                    return readStream();
+                });
+            }
+
+            // Start the recursive reading
+            return readStream();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            contentDiv.textContent = `Error: ${error.message}`;
+        });
+
+    }

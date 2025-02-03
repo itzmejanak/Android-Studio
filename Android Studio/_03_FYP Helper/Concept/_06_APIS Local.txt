@@ -1,0 +1,72 @@
+To create an **API** for locally testing your app with **Ollama**, you can set up a simple **FastAPI** or **Flask** server that interacts with the **Ollama CLI** or Python library.  
+
+---
+
+### **1️⃣ Install Dependencies**
+First, install the required Python packages:
+
+```powershell
+pip install fastapi uvicorn ollama
+```
+
+---
+
+### **2️⃣ Create a FastAPI Server**
+Save the following code as **`app.py`**:
+
+```python
+from fastapi import FastAPI
+import ollama
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Ollama API is running!"}
+
+@app.post("/generate")
+def generate_text(prompt: str):
+    response = ollama.chat(model="deepseek-r1:1.5b", messages=[{"role": "user", "content": prompt}])
+    return {"response": response["message"]}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000)
+```
+
+---
+
+### **3️⃣ Run the API Locally**
+Run the following command in your terminal:
+
+```powershell
+python app.py
+```
+
+You should see output similar to:
+
+```
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+
+---
+
+### **4️⃣ Test the API**
+- Open your browser and visit:  
+  👉 **http://127.0.0.1:8000**  
+  You should see `{ "message": "Ollama API is running!" }`
+
+- To test text generation, use **Postman**, or send a request via `curl`:
+
+```powershell
+curl -X 'POST' \
+  'http://127.0.0.1:8000/generate?prompt=Hello, how are you?' \
+  -H 'accept: application/json'
+```
+
+---
+
+### **5️⃣ Use It in Your App**
+Now you can call `http://127.0.0.1:8000/generate` from your frontend or application.
+
+Would you like me to help integrate this into your app? 🚀

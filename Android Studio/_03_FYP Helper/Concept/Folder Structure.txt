@@ -1,0 +1,32 @@
+```
+/lib
+  /data
+    /models
+    /repositories
+    /data_sources
+  /business
+    /entities
+    /repositories
+    /use_cases
+  /presentation
+    /pages
+    /providers (or /bloc)
+    /widgets
+```
+
+### Explanation of Each Layer:
+
+1. **Data Layer**:
+   - **models**: Data structures that represent the data received from APIs or databases.
+   - **repositories**: Interfaces that define methods for data operations, acting as a bridge between the data sources and the business layer.
+   - **data_sources**: Classes that handle data retrieval from various sources (e.g., remote APIs, local databases).
+
+2. **Business Layer**:
+   - **entities**: Core data structures that represent the business model, independent of any data source.
+   - **repositories**: Interfaces that define methods for business logic operations, often calling the data layer repositories.
+   - **use_cases**: Classes that encapsulate specific business logic and interact with repositories to perform operations.
+
+3. **Presentation Layer**:
+   - **pages**: UI screens that represent different views in the application.
+   - **providers (or bloc)**: State management classes that manage the state of the UI and communicate with the business layer.
+   - **widgets**: Reusable UI components that make up the user interface.

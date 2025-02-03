@@ -1,0 +1,134 @@
+### **1. Authentication Flow**
+#### **Login Page**  
+![Login Page Concept](https://via.placeholder.com/800x600.png?text=Login+Page)  
+- **Layout**:  
+  - Centered card with app logo ("NotionAI" or your app name).  
+  - Email + Password input fields (Material Design-style rounded corners).  
+  - Primary button: **"Log In"**.  
+  - Secondary links: **"Sign Up"**, **"Forgot Password?"**.  
+  - Social login buttons (Google/Apple icons) at the bottom.  
+- **Enhancements**:  
+  - Error messages below fields (red text for invalid credentials).  
+  - Hover effects on buttons (subtle elevation).  
+
+#### **SignUp Page**  
+![Signup Page Concept](https://via.placeholder.com/800x600.png?text=SignUp+Page)  
+- **Layout**:  
+  - Name, Email, Password fields with floating labels.  
+  - Password strength bar (green/yellow/red).  
+  - Checkbox: **"I agree to Terms & Conditions"**.  
+  - Primary button: **"Get OTP"**.  
+- **Enhancements**:  
+  - Auto-focus on the next field when typing (e.g., name → email).  
+  - Tooltip: **"Password must be 8+ characters with a number"**.  
+
+#### **OTP Confirmation Page**  
+![OTP Page Concept](https://via.placeholder.com/800x600.png?text=OTP+Page)  
+- **Layout**:  
+  - Title: **"Verify Your Email"**.  
+  - 6 input boxes for OTP digits (grid layout).  
+  - **"Resend OTP"** link below.  
+  - Primary button: **"Confirm"**.  
+- **Enhancements**:  
+  - Auto-advance to next digit box on input.  
+  - Countdown timer: **"Resend OTP in 0:30"**.  
+
+---
+
+### **2. Home Page**  
+![Home Page Concept](https://via.placeholder.com/800x600.png?text=Home+Page)  
+- **Layout**:  
+  - **Top Bar**:  
+    - App logo (left).  
+    - Search bar (center, with placeholder **"Search notes..."**).  
+    - Profile icon (right; dropdown for Settings/Logout).  
+  - **Left Sidebar**:  
+    - Tabs: **Manual** | **YouTube** | **Webpage** (icon + text).  
+    - Folders under each tab (e.g., "Biology", "Work Ideas").  
+    - **"+ New Folder"** button at the bottom.  
+  - **Main Area**:  
+    - Pinned Notes section (grid of cards with titles and snippets).  
+    - **Floating Action Button (FAB)**: **"+ Create Note"** (opens modal with Manual/YouTube/Webpage options).  
+    - Folder/note list (thumbnail, title, last edited time).  
+- **Interactions**:  
+  - Hovering a note shows **Pin**, **Delete**, **Export** icons.  
+  - Dragging notes between folders (visual drop zone).  
+
+---
+
+### **3. Edit Note Page**  
+![Edit Note Concept](https://via.placeholder.com/800x600.png?text=Edit+Note)  
+- **Layout**:  
+  - **Top Bar**:  
+    - Back arrow + editable note title.  
+    - Buttons: **Save** (💾), **Preview** (👁️), **Export** (📤).  
+  - **Left Panel (Dynamic)**:  
+    - **YouTube Notes**: Embedded video player (top) + transcript snippets (click to jump to timestamp).  
+    - **Webpage Notes**: Extracted text preview (scrollable).  
+    - **Manual Notes**: Formatting toolbar (bold, italic, bullets).  
+  - **Main Editor**:  
+    - Rich text area (like Notion, with slash commands for AI actions).  
+    - AI Toolbar (sticky at top):  
+      - **Format**: Dropdown with #Bullets, #Table, #Diagram.  
+      - **Remake**: Rewrite options (Simplify, Expand, Academic).  
+      - **Tone**: Dropdown (Formal, Casual, **My Tone** → links to "Write Your Tone" page).  
+  - **Right Panel**:  
+    - **Generate Flashcards** (🧠) and **Generate Quiz** (❓) buttons.  
+    - Collapsible preview of generated flashcards/quizzes.  
+- **Interactions**:  
+  - Clicking #Diagram opens a Mermaid.js editor with live preview.  
+  - AI actions show loading spinners + success toasts.  
+
+---
+
+### **4. Preview Note Page**  
+![Preview Concept](https://via.placeholder.com/800x600.png?text=Preview+Note)  
+- **Layout**:  
+  - Rendered note with:  
+    - Tables (styled with zebra stripes).  
+    - Mermaid diagrams (static images for PDF export).  
+    - Flashcards (front/back cards with flip animation).  
+    - Quizzes (multiple-choice with radio buttons).  
+  - Top bar: **"Back to Edit"**, **Export PDF** (with dropdown: Single/Combined).  
+- **Interactions**:  
+  - Toggle **"Test Mode"** for quizzes (hides answers).  
+  - Hover over diagrams to zoom.  
+
+---
+
+### **5. Write Your Tone Page**  
+![Tone Analysis Concept](https://via.placeholder.com/800x600.png?text=Tone+Analysis)  
+- **Layout**:  
+  - Title: **"Train AI to Write Like You"**.  
+  - Text editor with word counter (**"500/500 words minimum"**).  
+  - **"Analyze My Tone"** button (bottom-right).  
+  - Progress bar: **"Analyzing tone... 75% complete"**.  
+  - Example section: **"Your notes will look like this: [Sample Text]"**.  
+- **Enhancements**:  
+  - Syntax highlighting for keywords (e.g., slang, academic phrases).  
+
+---
+
+### **Missing UI Components**  
+1. **Export Modal**:  
+   - Options: **Single PDF**, **Combine Notes**, **Page Size** (A4, Letter), **Orientation** (Portrait/Landscape).  
+   - Progress bar for PDF generation.  
+2. **Empty States**:  
+   - Illustration + text: **"No notes here yet! Click + to create one."**  
+3. **Folder/Note Context Menu**:  
+   - Right-click menu: **Pin**, **Rename**, **Change Color**, **Delete**.  
+
+---
+
+### **User Flow Demo**  
+**Scenario**: User creates a YouTube note and exports it.  
+1. **Home Page** → Click **FAB** → **YouTube Note** → Paste URL.  
+2. **Edit Note Page** → AI generates summary → Apply #Bullets → **Generate Quiz**.  
+3. **Preview Page** → Toggle quiz to Test Mode → **Export PDF** → Select **Single**.  
+
+---
+
+### **Next Steps**  
+1. Create high-fidelity mockups in Figma with auto-layout.  
+2. Prototype interactions (e.g., drag-and-drop notes).  
+3. Test with users on **UserTesting.com** and iterate.  

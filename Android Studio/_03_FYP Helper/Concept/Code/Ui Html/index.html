@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Ai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="history-overlay" id="historyOverlay"></div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="header-content">
+                    <div class="bot-info">
+                        <button id="toggleHistory" class="icon-button" title="View History">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="bot-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="bot-status">
+                            <h2>DeepSeek</h2>
+                            <span class="status">Online</span>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button id="newChatButton" class="icon-button" title="New Chat">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button id="themeToggle" class="icon-button" title="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <select id="chatModelSelect">
+                            <option value="deepSeek">Deep Seek</option>
+                            <option value="chatGPT4">ChatGPT-4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-messages-content">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Welcome to AI Chat!</h3>
+                        <p>I'm here to help you with any questions you have. I support markdown formatting!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <div class="input-wrapper">
+                    <textarea id="userInput" placeholder="Type your message here... (Markdown supported)" rows="1"></textarea>
+                    <button id="sendButton" class="send-button" title="Send Message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3><i class="fas fa-clock"></i> Chat History</h3>
+                <button id="closeHistory" class="icon-button" title="Close History">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="history-content" id="historyContent">
+                <!-- Chat history will be added here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

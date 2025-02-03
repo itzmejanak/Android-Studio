@@ -1,4 +1,4 @@
-i am bulding the flutter application for that i have mind map and i have one github froked flutter project at first i will give you my idea then ask to for forked repo according to that we will discussed the problems and get slolution from that repo ok
+i am bulding the flutter application for that i have mind map first i will give you my idea then we will discussed the problems that i want to solve and get slolution ok
 
 To render the descriptive text md along with the generated Mermaid diagram in your Flutter application, what i can do
 
